@@ -1,18 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { FaTrashAlt } from "react-icons/fa";
+import { deleteTask } from '../actions';
 import '../style.css';
-import { deletePerson } from '../actions';
 
-function PeopleList(props) {
-  function DeleteList(e) {
-    props.deletePerson(e);
+const PeopleList=(props)=>{
+  const DeleteTask=(e)=> {
+    props.deleteTask(e);
   }
-  const arr = props.contacts;
+  const arr = props.tasks;
   const listItems = arr.map((val, index) => (
     <li key={index}>
-      <i>{val}</i>
-      <span onClick={() => DeleteList(index)} key={index}>
-        <i>&#10006;</i>
+      {val}
+      <span onClick={() => DeleteTask(index)} key={index}>
+      <FaTrashAlt/>
       </span>
     </li>
   ));
@@ -23,15 +24,15 @@ function PeopleList(props) {
   );
 }
 
-function mapStateToProps(state) {
+const mapStateToProps=(state)=>{
   return {
-    contacts: state.contacts
+    tasks: state.tasks
   };
 }
 const mapDipatchToProps = {
-  deletePerson
+  deleteTask
 };
 export default connect(
   mapStateToProps,
   mapDipatchToProps
-)(PeopleList);
+)(TaskList);

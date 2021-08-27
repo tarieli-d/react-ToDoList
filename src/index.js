@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PeopleList from './components/PeopleList';
-import AddPersonForm from './components/AddPersonForm';
+import TaskList from './components/TaskList';
+import AddTaskForm from './components/AddTaskForm';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import './style.css';
 
 const initialState = {
-  contacts: ["Go for shopping", "Cook meal", "Fix computer"] 
+  tasks: ["Go for shopping", "Cook meal", "Fix computer"] 
   };
 
 // Reducer function
@@ -15,13 +15,13 @@ function reducer(state = initialState, action) {
   switch(action.type) {
     case 'ADD_PERSON':
       return {...state,
-        contacts: [...state.contacts, action.data]}
+        tasks: [...state.tasks, action.data]}
 
     case 'DELETE_PERSON':
-      const new_arr=[...state.contacts];
+      const new_arr=[...state.tasks];
       new_arr.splice(action.data,1);
       return {...state,
-        contacts: [...new_arr]}
+        tasks: [...new_arr]}
     default:
       return state;
   }
@@ -30,8 +30,8 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer);
 ReactDOM.render(
   <Provider store={store}>
-    <AddPersonForm />
-    <PeopleList />
+    <AddTaskForm />
+    <TaskList />
    
   </Provider>,
   document.getElementById('root')

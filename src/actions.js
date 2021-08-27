@@ -1,13 +1,13 @@
 // Action Creator
-export function addPerson(person) {
+export function addTask(task) {
     return {
-        type: 'ADD_PERSON',
-        data: person
+        type: 'ADD_TASK',
+        data: task
     }
 }
-export function deletePerson(person) {
+export function deleteTask(task) {
     return {
-        type: 'DELETE_PERSON',
-        data: person
+        type: 'DELETE_TASK',
+        data: task
     }
 }
