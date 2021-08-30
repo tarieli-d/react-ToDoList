@@ -7,23 +7,23 @@ import { Provider } from 'react-redux';
 import './style.css';
 
 const initialState = {
-  tasks: ['Go for shopping', 'Cook meal', 'Fix computer']
+  tasks: ['Go shopping', 'Cook a meal', 'Fix computer']
 };
 
 // Reducer function
-function reducer(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_PERSON':
+    case 'ADD_TASK':
       return { ...state, tasks: [...state.tasks, action.data] };
 
-    case 'DELETE_PERSON':
+    case 'DELETE_TASK':
       const new_arr = [...state.tasks];
       new_arr.splice(action.data, 1);
       return { ...state, tasks: [...new_arr] };
     default:
       return state;
   }
-}
+};
 
 const store = createStore(reducer);
 ReactDOM.render(
