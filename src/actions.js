@@ -5,9 +5,9 @@ export function addTask(task) {
     data: task
   };
 }
-export function deleteTask(task) {
+export function deleteTask(index) {
   return {
     type: 'DELETE_TASK',
-    data: task
+    data: index
   };
 }

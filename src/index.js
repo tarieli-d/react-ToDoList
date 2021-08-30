@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import './style.css';
 
 const initialState = {
-  tasks: ['Go shopping', 'Cook a meal', 'Fix computer']
+  tasks: ['Go shopping', 'Cook a meal', 'Fix a computer']
 };
 
 // Reducer function
@@ -15,7 +15,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_TASK':
       return { ...state, tasks: [...state.tasks, action.data] };
-
     case 'DELETE_TASK':
       const new_arr = [...state.tasks];
       new_arr.splice(action.data, 1);
