@@ -12,33 +12,33 @@ html {
   margin-top: 2vh;
   padding: 1rem;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border: 2px solid #5e9fea;
 }
 form {
   display: flex;
   width: 100%;
-  height: 4rem;
+  height: 3.8rem;
   background: #2680ce;
-  border: 0.2rem solid #2680ce;
-  border-radius: 0.3rem;
+  border: 0.1rem solid #5e9fea;
+  border-radius: 0.2rem;
 }
 input {
-  border: 1px solid #ced4da;
   width: 79%;
   height: 100%;
+  border: 1px solid #ced4da;
   text-indent: 1rem;
   outline: none;
-  font-weight: bold;
+  font: 100 1rem sans-serif;
 }
 button {
+  width: 20%;
+  height: 100%;
   font-size: 3rem;
   border: none;
   color: #f3f0f0;
-  background: /*#f2d533*/ #2680ce;
-  width: 20%;
-  height: 100%;
+  background: transparent;
   cursor: pointer;
 }
 ul {
@@ -60,7 +60,6 @@ li span:hover {
   color: rgba(233, 14, 14, 0.89);
   cursor: pointer;
 }
-
 .task,
 .task-fadeout {
   display: flex;
@@ -77,6 +76,8 @@ li span:hover {
   font-family: 'Courier New', Courier, monospace;
   word-break: break-word;
   overflow-wrap: break-word;
+}
+.task {
   -webkit-animation: fadein 0.5s linear forwards;
   animation: fadein 0.5s linear forwards;
 }

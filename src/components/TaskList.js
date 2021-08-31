@@ -10,7 +10,7 @@ const TaskList = props => {
   const deleteTask = index => {
     /**set index of task,which  is deleted,we need that index to apply fadeout animation css only to the item,which is deleted */
     setIsFadingOut(index);
-    /**wait animation lasting 300ml and then finish it*/
+    /**stop animation after 300ml*/
     const t = setTimeout(() => {
       props.deleteTask(index);
       setIsFadingOut(-1);
