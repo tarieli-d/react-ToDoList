@@ -21,7 +21,7 @@ const AddTaskForm = props => {
       <form>
         <input
           type="text"
-          placeholder="Add a task"
+          placeholder="Add a task..."
           onChange={handleChange}
           value={task}
         />

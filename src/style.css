@@ -7,10 +7,10 @@ html {
   box-sizing: inherit;
 }
 #root {
-  width: 350px;
+  width: 400px;
   margin: auto;
-  margin-top: 2vh;
-  padding: 1rem;
+  margin-top: 5%;
+  padding: 1.4rem;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -19,35 +19,39 @@ html {
 form {
   display: flex;
   width: 100%;
-  height: 3.8rem;
-  background: #2680ce;
-  border: 0.1rem solid #5e9fea;
+  height: 3.2rem;
+  border: 2px solid #0472f0;
+  background: #2f7acf;
   border-radius: 0.2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 input {
-  width: 79%;
+  width: 87%;
   height: 100%;
-  border: 1px solid #ced4da;
   text-indent: 1rem;
   outline: none;
+  border: none;
   font: 100 1rem sans-serif;
+  border-radius: 0.1rem;
 }
 button {
-  width: 20%;
+  width: 13%;
   height: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   border: none;
   color: #f3f0f0;
   background: transparent;
   cursor: pointer;
+  box-sizing: content-box;
 }
 ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  position: relative;
-  padding: 0;
+  row-gap: 0.8rem;
   width: 100%;
+  border-top: 2px solid #1d8ce7;
+  padding: 0.5rem 0 0;
+  margin: 1rem 0 0;
 }
 
 li b {
@@ -70,9 +74,9 @@ li span:hover {
   padding: 0.3rem;
   background-color: rgb(31, 142, 197);
   color: rgb(255, 255, 255);
-  box-shadow: 0 0 0.1rem 0.1rem #b3b4b6;
-  border-radius: 0.3rem;
-  font-size: 1.5rem;
+  box-shadow: 0 0 5px 2px rgb(187, 187, 187);
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
   font-family: 'Courier New', Courier, monospace;
   word-break: break-word;
   overflow-wrap: break-word;
